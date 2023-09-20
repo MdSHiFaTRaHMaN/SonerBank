@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Soner Bangla Bank</title>
 </head>
 <body>
-    
+    <header>
+        <h1 class="text-5xl text-center mt-4">Soner Bangla <span class="text-red-500 font-medium">Bank Limited</span>!!!</h1>
+    </header>
+    <main>
+        <section class="text-gray-600 body-font" id="login">
+            <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+              <div class="lg:w-[500px] mx-auto md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+                <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Login Your Account</h2>
+                <div class="relative mb-4">
+                  <label for="full-name" class="leading-7 text-sm text-gray-600">Enter Your Account No..</label>
+                  <input type="text" id="full-name" name="full-name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                  <label for="email" class="leading-7 text-sm text-gray-600">Password</label>
+                  <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="login()">Login</button>
+              </div>
+            </div>
+          </section>
+
+        <!-- balance and transaction summary -->
+       <section  id="account" >
+        <div class="mt-8" >
+            <div class="grid lg:grid-cols-3 gap-4 w-3/4 mx-auto text-white">
+                <div class="bg-teal-400 p-8 rounded-lg">
+                    <h4 class="text-3xl">Deposit</h4>
+                    <h2  class="text-5xl font-medium">$<span id="deposit-total">00</span></h2>
+                </div>
+                <div class="bg-green-500 p-8 rounded-lg">
+                    <h4 class="text-3xl">Withdraw</h4>
+                    <h2 class="text-5xl font-medium">$<span id="withdraw-total">00</span></h2>
+                </div>
+                <div class="bg-blue-400 p-8 rounded-lg">
+                    <h4 class="text-3xl">Balance</h4>
+                    <h2 class="text-5xl font-medium">$<span id="balance-total">1240</span></h2>
+                </div>
+            </div>
+        </div>
+        <!-- deposit and Withdraw section -->
+        <div class="mt-8 w-full lg:w-3/4 mx-auto">
+            <div class="grid lg:grid-cols-2 mx-5 lg:mx-0 gap-4">
+                <div class="bg-pink-500 p-8 rounded-lg">
+                    <h3 class="text-4xl text-white mb-4">Your Deposit</h3>
+                    <input id="deposit-field" class="w-3/4 px-4 py-3 rounded block" type="number" placeholder="$ Amount  you want to deposit">
+                    <button id="btn-deposit" class="bg-blue-800 px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-blue-600">Deposit</button>
+                </div>
+                <div class="bg-sky-700 p-8 rounded-lg">
+                    <h3 class="text-4xl text-white mb-4">Your Withdraw</h3>
+                    <input id="withdraw-field" class="w-3/4 px-4 py-3 rounded block" type="number" placeholder="$ Amount  you want to deposit">
+                    <button id="btn-withdraw" class="bg-blue-800 px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-blue-600">Withdraw</button>
+                </div>
+            </div>
+        </div>
+       </section>
+    </main>
 </body>
 </html>
